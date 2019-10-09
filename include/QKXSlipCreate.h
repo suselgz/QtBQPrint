@@ -4,25 +4,6 @@
 #pragma once
 #include <QObject>
 #include "opencv2/opencv.hpp"
-
-enum PRODECT_COUPONS_
-{
-	One_yuan = 1,
-	Five_yuan = 5,
-	Ten_yuan = 10,
-	Twenty_yuan = 20,
-	Fifty_yuan = 50,
-	One_hundred_yuan = 100
-};
-enum GENERATE_ERR_
-{
-	GenerateSlip_OK = 0,           //创建成功
-	GenerateQRcode_failed = -1,    //生成二维码失败
-	CreateSlipInfo_failed = -2,    //生成封签的信息失败
-	Save_image_failed = -3,        //生成的封签保存到本地失败
-	Load_ModelImg_failed =-4,      //加载模板图像失败
-	Create_FQimg_failed =-5        //生成封签图像失败
-};
 struct SLIP_PRINT_INFO
 {
 	QString QRStr;
@@ -42,6 +23,7 @@ class   QKXSlipCreate : public QObject
 {
 	Q_OBJECT
 public:
+	virtual void GetLastMsg(int type, QString Msg) = 0;
 	virtual void SetPath(QString model_path,QString print_path)=0;
 	virtual void GetPath(QString& model_path, QString& print_path)=0;
 	virtual bool GenerateQRcode(QString QRtempstr, cv::Mat& img)=0;

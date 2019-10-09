@@ -10,6 +10,31 @@ QSlipCreate::~QSlipCreate()
 	delete m_tscdll;
 }
 
+void QSlipCreate::GetLastMsg(int type, QString Msg)
+{
+	QString msg;
+		switch (type)
+		{
+		case GENERATE_ERR_::GenerateQRcode_failed:
+			QMessageBox::information(NULL, "INFO", "二维码生成失败!");
+			break;
+		case GENERATE_ERR_::CreateSlipInfo_failed:
+			QMessageBox::information(NULL, "INFO", "封签信息生成失败!");
+			break;
+		case GENERATE_ERR_::Save_image_failed:
+			QMessageBox::information(NULL, "INFO", "存储失败!");
+			break;
+		case GENERATE_ERR_::Load_ModelImg_failed:
+			QMessageBox::information(NULL, "INFO", "加载模板图像失败!");
+			break;
+		case GENERATE_ERR_::Create_FQimg_failed:
+			QMessageBox::information(NULL, "INFO", "生成封签图像失败!");
+			break;
+		default:
+			break;
+
+}
+
 void QSlipCreate::SetPath(QString model_path, QString print_path)
 {
 	m_modelPath = model_path;
