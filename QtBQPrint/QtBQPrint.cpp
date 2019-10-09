@@ -78,26 +78,8 @@ void QtBQPrint::on_pushButton_CreateFQ_clicked()
 	int bRet = m_Slip->GenerateSlipInfo(print_info, img);
 	if (bRet < 0)
 	{
-		switch (bRet)
-		{
-		case GENERATE_ERR_::GenerateQRcode_failed:
-			QMessageBox::information(NULL, "INFO", "¶þÎ¬ÂëÉú³ÉÊ§°Ü!");
-			break;
-		case GENERATE_ERR_::CreateSlipInfo_failed:
-			QMessageBox::information(NULL, "INFO", "·âÇ©ÐÅÏ¢Éú³ÉÊ§°Ü!");
-			break;
-		case GENERATE_ERR_::Save_image_failed:
-			QMessageBox::information(NULL, "INFO", "´æ´¢Ê§°Ü!");
-			break;
-		case GENERATE_ERR_::Load_ModelImg_failed:
-			QMessageBox::information(NULL, "INFO", "¼ÓÔØÄ£°åÍ¼ÏñÊ§°Ü!");
-			break;
-		case GENERATE_ERR_::Create_FQimg_failed:
-			QMessageBox::information(NULL, "INFO", "Éú³É·âÇ©Í¼ÏñÊ§°Ü!");
-			break;
-		default:
-			break;
-		}
+		QString msg;
+		m_Slip->GetLastMsg(bRet, msg);
 	}
 	else
 	{

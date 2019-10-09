@@ -39,7 +39,7 @@ class QSlipCreate : public QKXSlipCreate
 public:
 	QSlipCreate();
 	~QSlipCreate();
-	void GetLastMsg(int type, QString Msg);
+	void GetLastMsg(int type, QString& Msg);
 	void SetPath(QString model_path, QString print_path);
 	void GetPath(QString& model_path, QString& print_path);
 	bool GenerateQRcode(QString QRtempstr,cv::Mat& img);

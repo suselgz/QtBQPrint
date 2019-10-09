@@ -32,11 +32,6 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
-    <Filter Include="Generated Files\DLLDebug">
-      <UniqueIdentifier>{46228c7e-dc9c-47fc-b496-4c685a998622}</UniqueIdentifier>
-      <Extensions>cpp;moc</Extensions>
-      <SourceControlFiles>False</SourceControlFiles>
-    </Filter>
     <Filter Include="Generated Files\Release">
       <UniqueIdentifier>{30471a79-33a2-4ac8-b0be-86c0b8ac21f7}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
@@ -86,17 +81,11 @@
     <ClCompile Include="GeneratedFiles\Debug\moc_QSlipCreate.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\DLLDebug\moc_QSlipCreate.cpp">
-      <Filter>Generated Files\DLLDebug</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_QSlipCreate.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_QKXSlipCreate.cpp">
       <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\DLLDebug\moc_QKXSlipCreate.cpp">
-      <Filter>Generated Files\DLLDebug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_QKXSlipCreate.cpp">
       <Filter>Generated Files\Release</Filter>

@@ -23,7 +23,7 @@ class   QKXSlipCreate : public QObject
 {
 	Q_OBJECT
 public:
-	virtual void GetLastMsg(int type, QString Msg) = 0;
+	virtual void GetLastMsg(int type, QString& Msg) = 0;
 	virtual void SetPath(QString model_path,QString print_path)=0;
 	virtual void GetPath(QString& model_path, QString& print_path)=0;
 	virtual bool GenerateQRcode(QString QRtempstr, cv::Mat& img)=0;
